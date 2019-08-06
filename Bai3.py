@@ -14,9 +14,8 @@ for title in movieTitles:
 	for word in words:
 		if word not in stopWords:
 			wordList.append(word)
-wordIterator = iter(wordList)
 counter = Counter()
-for word in wordIterator:
+for word in wordList:
 	counter[word] += 1
 wordFrequency = pd.Series(counter) #đếm số lần xuất hiện
 
